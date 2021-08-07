@@ -14,14 +14,34 @@
 cargo new ${NAME_PROJECT}
 ````
 
-### General commands
+### build and run
 
 ```bash
 cargo run # to build and run
 cargo build # just to build
 ```
 Note: the above will default to the debug versions adding `--release` will build and run the release optimized versions
-  
+
+### distribute
+
+```bash  
+cargo publish # publish a crate to crate.io 
+```
+when publishing ensure that the toml file has the neccessary metadata, see [Cargo's Manifest Format](https://doc.rust-lang.org/cargo/reference/manifest.html)
+
+
+to install the crate from crates.io as follows:
+
+```bash
+cargo install <crate-name>
+```
+but `--git` and `--path` flags can change this source. 
+***Question: Do these work with publish as well-??***
+
+
+this is just a snippet of what is possible, but the doc on the [Cargo Commands](https://doc.rust-lang.org/cargo/commands/) shows what is possible and the wide.
+
+
 # Syntax
 ## Variables
 
@@ -144,7 +164,7 @@ impl Point {
 
   
 
-        
+            
 # Learn from existing code 
 
   1. [dust (du + rust)](https://github.com/bootandy/dust)
@@ -157,13 +177,25 @@ impl Point {
 ### Objective
 To have a console visual representation that shows positioning of the clock items when the input handle is turned
 
-## Simple CLI app
+## Register Decoder CLI app
 
 ### Objective
+  - Read register defs from a JSON/Config File the will allow user encode/decode the register fields values for 64/32 bit registers
   - Get a CLI Template for future utility apps ( see CLI book a)
-  - modifies existing JSON file, adds a test object 
   - 
+  
+### CLI
+```text
+reg_decode [-d defs.json] <reg_name>  [-f field_name] value [-f field_name value]...
 
+-c, --config    : Specifies a json file that contains the register definitions,
+                  if not specified the default  defs.json file will be used    
+
+-f, --field     : specifies a field for the register, if specified the register value 
+                  is displayed.  For multiple fields a register this option can be used 
+                  multiple times 
+
+```
 
 # Interesting stuff
 
