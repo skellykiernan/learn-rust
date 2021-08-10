@@ -172,12 +172,12 @@ impl Point {
 
 # Learn by trying
 
-##    Greek Clock device, 
+## Greek Clock device, 
 
 ### Objective
 To have a console visual representation that shows positioning of the clock items when the input handle is turned
 
-## Register Decoder CLI app
+## Register Decoder Console (CLI) program
 
 ### Objective
   - Read register defs from a JSON/Config File the will allow user encode/decode the register fields values for 64/32 bit registers
@@ -188,7 +188,7 @@ To have a console visual representation that shows positioning of the clock item
 ```text
 reg_decode [-d defs.json] <reg_name>  [-f field_name] value [-f field_name value]...
 
--c, --config    : Specifies a json file that contains the register definitions,
+-d, --defs      : Specifies a json file that contains the register definitions,
                   if not specified the default  defs.json file will be used    
 
 -f, --field     : specifies a field for the register, if specified the register value 
@@ -196,6 +196,14 @@ reg_decode [-d defs.json] <reg_name>  [-f field_name] value [-f field_name value
                   multiple times 
 
 ```
+
+### design & implement stuff
+
+crates that maybe useful
+  - `confy`, uses yaml (***not json as above, remove the tech term from usage-??***) to serialise/deserialise(serde) programs configurations. Unsure if would be able to handle arrays/collections of time
+  - `clap`, for parsing command line arguments and subcommands
+  - `paw`, Command line argument paw-rser abstraction for main
+  - `structop`, builds on clap plus looks like it uses paw   
 
 # Interesting stuff
 
