@@ -195,7 +195,7 @@ To have a console visual representation that shows positioning of the clock item
 ```text
 reg_decode [-d defs.json] <reg_name>  [-f field_name] value [-f field_name value]...
 
--d, --defs      : Specifies a json file that contains the register definitions,
+-d, --defs      : Specifies a definition file that contains the register definitions,
                   if not specified the default  defs.json file will be used    
 
 -f, --field     : specifies a field for the register, if specified the register value 
