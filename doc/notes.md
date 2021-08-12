@@ -154,6 +154,22 @@ impl Point {
   - Modules and use: Let you control the organization, scope, and privacy of paths
   - Paths: A way of naming an item, such as a struct, function, or module
 
+```c
+├── Cargo.toml 
+├── src
+│     ├── bin
+│     │     └── organise_code.rs  // multiple binary exe here
+│     ├── main.rs  // Default binary, need to specify "default-run" in the toml file
+│     ├── lib.rs
+│     └── try_a_module  // shared modules example using directory
+│         └── mod.rs  // default impelementations for the try_a_module module
+├── target  // build outputs
+│     └── debug  // the de
+└── tests  // integration tests, unit tests aimed to be part of the file
+    └── my_tests.rs
+```
+
+
 # Courses
   
 ## Udemy
