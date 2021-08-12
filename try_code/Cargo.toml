@@ -3,6 +3,9 @@ name = "first"
 version = "0.1.0"
 authors = ["skelly"]
 edition = "2018"
+# added as there are multiple binaries ( extra in the bin/src)
+default-run = "first"
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
