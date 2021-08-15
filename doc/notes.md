@@ -149,26 +149,38 @@ impl Point {
 
 # Organizing Code
 
+## code structure
+
   - Packages: A Cargo feature that lets you build, test, and share crates
   - Crates: A tree of modules that produces a library or executable
   - Modules and use: Let you control the organization, scope, and privacy of paths
   - Paths: A way of naming an item, such as a struct, function, or module
 
+## crate directory structure
+
 ```c
 ├── Cargo.toml 
+├── README.md // optional or alternative method to document the crate/package
 ├── src
 │     ├── bin
 │     │     └── organise_code.rs  // multiple binary exe here
 │     ├── main.rs  // Default binary, need to specify "default-run" in the toml file
 │     ├── lib.rs
 │     └── try_a_module  // shared modules example using directory
-│         └── mod.rs  // default impelementations for the try_a_module module
+│         └── mod.rs  // default implementations for the try_a_module module
 ├── target  // build outputs
-│     └── debug  // the de
+│     └── debug  // the debug build outputs are here
 └── tests  // integration tests, unit tests aimed to be part of the file
     └── my_tests.rs
 ```
 
+## documenting code
+
+part of orgainising code is documentation, use [rustdoc](https://doc.rust-lang.org/rustdoc/index.html) it supports the `outer` and `inner` ways of documenting code
+  - outer: documents item after the documentation, uses `\\\`: 3 backslashes, for example this method would be used to document a function
+  - inner: here the documentation is inside the item it is documenting, uses `\\!`: replace last backslash with a bang character, for example this method would be used to document a crate
+
+another nice feature of `rustdoc` is that it supports markdown files, which could be used as an alternative method to document the code. Instead of using the  
 
 # Courses
   
@@ -181,11 +193,10 @@ impl Point {
 # References
 
   1. [learn by example](https://doc.rust-lang.org/stable/rust-by-example)
-  1. [book](https://doc.rust-lang.org/book/)
+  1. [the book](https://doc.rust-lang.org/book/)
+  1. [rustdoc](https://doc.rust-lang.org/rustdoc/index.html)
   1. [Blog with list of resources](https://serokell.io/blog/learn-rust)
   1. [CLI BOOK](https://rust-cli.github.io/book/tutorial/cli-args.html)
-
-  
 
             
 # Learn from existing code 
