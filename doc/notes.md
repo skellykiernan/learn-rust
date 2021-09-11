@@ -20,7 +20,9 @@ cargo new ${NAME_PROJECT}
 cargo run # to build and run
 cargo build # just to build
 ```
-Note: the above will default to the debug versions adding `--release` will build and run the release optimized versions
+Notes: 
+  - the above will default to the debug versions adding `--release` will build and run the release optimized versions
+  - add `--bin` option allows to select from multiple binaries
 
 ### distribute
 
@@ -205,17 +207,10 @@ another nice feature of `rustdoc` is that it supports markdown files, which coul
 
 
 # Learn by trying
-
-## Greek Clock device, 
-
-### Objective
-To have a console visual representation that shows positioning of the clock items when the input handle is turned
-
 ## Register Decoder Console (CLI) program
-
 ### Objective
   - Read register defs from a JSON/Config File the will allow user encode/decode the register fields values for 64/32 bit registers
-  - Get a CLI Template for future utility apps ( see CLI book a)
+  - Get a CLI Template for future utility apps ( see CLI book)
   - 
   
 ### CLI
@@ -235,10 +230,18 @@ reg_decode [-d defs.json] <reg_name>  [-f field_name] value [-f field_name value
 
 crates that maybe useful
   - `confy`, uses yaml (***not json as above, remove the tech term from usage-??***) to serialise/deserialise(serde) programs configurations. Unsure if would be able to handle arrays/collections of time
-  - `clap`, for parsing command line arguments and subcommands
-  - `paw`, Command line argument paw-rser abstraction for main
-  - `structop`, builds on clap plus looks like it uses paw   
+  - `structop`, builds on clap plus looks like it uses paw
+    + `clap`, for parsing command line arguments and subcommands
+    + `paw`, Command line argument paw-rser abstraction for main
+  -
+     
 
+
+## Greek Clock device, 
+
+### Objective
+To have a console visual representation that shows positioning of the clock items when the input handle is turned
+    
 # Interesting stuff
 
 [Google Security blog: Rust in the Linux kernel](https://security.googleblog.com/2021/04/rust-in-linux-kernel.html)
