@@ -215,14 +215,15 @@ another nice feature of `rustdoc` is that it supports markdown files, which coul
   
 ### CLI
 ```text
-reg_decode [-d defs.json] <reg_name>  [-f field_name] value [-f field_name value]...
+reg_decode [-d defs.json] <reg_name> [reg_value] [-f field_name field_value]...
+
+displays the field values for a register or else display the register value when the a single or multiple field values are given as input instead of the register value
 
 -d, --defs      : Specifies a definition file that contains the register definitions,
                   if not specified the default  defs.json file will be used    
 
 -f, --field     : specifies a field for the register, if specified the register value 
-                  is displayed.  For multiple fields a register this option can be used 
-                  multiple times 
+                  is displayed rather than the individual fields.  s
 
 ```
 
