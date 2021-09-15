@@ -97,7 +97,6 @@ Note: there is no type inference must be explicated declared, or shadowing allow
 ```
 
 
-
 ## Arrays and Slices
 
     - Fixed sizes
