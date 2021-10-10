@@ -198,6 +198,7 @@ another nice feature of `rustdoc` is that it supports markdown files, which coul
   1. [rustdoc](https://doc.rust-lang.org/rustdoc/index.html)
   1. [Blog with list of resources](https://serokell.io/blog/learn-rust)
   1. [CLI BOOK](https://rust-cli.github.io/book/tutorial/cli-args.html)
+  1. [](https://learning-rust.github.io/)
 
             
 # Learn from existing code 
