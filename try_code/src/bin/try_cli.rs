@@ -1,5 +1,10 @@
 use structopt::StructOpt;
 
+struct FieldArg {
+    name: String,
+    value: u64,
+}
+
 /// this is first time using StructOpt for CLI app
 #[derive(StructOpt)]
 struct Cli {
@@ -15,7 +20,7 @@ struct Cli {
     defs: Option<std::path::PathBuf>,
     /// field name within the register
     #[structopt(short, long)]
-    field_names: Option<Vec<String>>,
+    field_names: Option<Vec<FieldArg>>,
 
 }
 
@@ -40,17 +45,18 @@ fn main() {
 
     // Checking an optional argument from the command line
     match args.defs {
-        Some(defs) => println!("There was SOME args.defs {:?}", defs),
+        Some(defs) => println!("There are SOME args.defs {:?}", defs),
         None    => println!("There is no(NONE) args.defs"),
     }
 
     match args.field_names {
-        Some(field_names) => println!("There was SOME field_names {:?}", field_names),
+        Some(field_names) => println!("There are SOME {:?} field_names {:?}", 
+                                       field_names.len()),
         None    => println!("There is no(NONE) args.field_names"),
     }
 
     match args.reg_value {
-        Some(reg_value) => println!("There was SOME reg_value {:?}", reg_value),
+        Some(reg_value) => println!("There are SOME reg_value {:?}", reg_value),
         None    => println!("There is no(NONE) reg_value"),
     }
 
